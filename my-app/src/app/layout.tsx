@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkProvider } from '@clerk/nextjs';
+
 import ThemeToggle from '../components/ThemeToggle';
 
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   const initialThemeClass = getInitialThemeClass();
 
   return (
-    <ClerkProvider>
+    
       <html lang="en" className={initialThemeClass}>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark transition-colors duration-300`}
@@ -46,7 +46,7 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ClerkProvider>
+   
   );
 }
 
